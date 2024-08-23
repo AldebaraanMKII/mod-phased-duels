@@ -69,8 +69,8 @@ void PhasedDueling::OnDuelStart(Player* firstplayer, Player* secondplayer)
         }
 
         // Couldnt find free unique phase
-        firstplayer->GetSession()->SendNotification("There are no free phases");
-        secondplayer->GetSession()->SendNotification("There are no free phases");
+        ChatHandler(firstplayer->GetSession()).SendNotification("There are no free phases");
+        ChatHandler(secondplayer->GetSession()).SendNotification("There are no free phases");
     }
 }
 
